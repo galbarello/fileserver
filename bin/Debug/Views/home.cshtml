@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+        <head>        
+                <title>Topshelf and NancyFx</title>
+        </head>
+        <body>
+        <div class="container_12 title">
+            <div class="grid_6">
+                    <h1>Topshelf and NancyFx</h1>
+            </div>
+            <div class="grid_6">
+                Current Date Time: @Model.CurrentDateTime.ToString()
+            </div>
+        </div>
+        <div class="container_12 clearfix">
+            <div class="grid_12">
+                <h2>Work Log:</h2>
+
+                @foreach (var entry in Model.WorkLog)
+                {
+                    <pre>@(entry=="pepe" ? "<span color='red'>"+entry+"</span>" : entry)</pre>
+                }
+            </div>
+        </div>
+        </body>
+</html>
